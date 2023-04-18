@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prodi extends Model
 {
+    use HasFactory;
     protected $table = 'prodi';
     protected $primarykey = 'id';
     protected $foreignKey = 'id_prodi';

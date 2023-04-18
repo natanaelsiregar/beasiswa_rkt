@@ -10,10 +10,10 @@ return new class extends Migration
      * Run the migrations.
      *
      * @return void
-     */mn
+     */
     public function up()
     {
-        Schema::create('personal_access_tokens', function (Blueprint $table) { n
+        Schema::create('personal_access_tokens', function (Blueprint $table) { 
             $table->id();
             $table->morphs('tokenable');
             $table->string('name');

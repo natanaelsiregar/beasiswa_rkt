@@ -8,6 +8,7 @@ use App\Http\Controllers\DataBeasiswaController;
 use App\Http\Controllers\EksternalBeasiswaController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DaftarBeasiswaController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,9 @@ use App\Http\Controllers\DaftarBeasiswaController;
 |
 */
 
+
+//Laman admin
+Route::get('/admin-side', [AdminController::class, 'index']);
 // Login
 Route::middleware('guest')->group(function(){
 
@@ -97,7 +101,5 @@ Route::get('{id}/',[BlogController::class,'show'])->name('article');
 Route::post('logout', LogoutController::class)->name('logout');
 
 
-//Laman admin
-Route::get('/home',function(){
-    return view('admin.home');
-});
+
+
