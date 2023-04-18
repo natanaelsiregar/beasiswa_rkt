@@ -1,4 +1,4 @@
-@include('admindashboard.berita.index')
+@include('admindashboard.templateadmin.header')
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -291,4 +291,4 @@
         </footer>
         <!-- partial -->
       </div>
-      @include('admindashboard.layout.footer')
+      @include('admindashboard.templateadmin.footer')

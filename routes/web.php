@@ -25,7 +25,7 @@ use App\Http\Controllers\BeritaController;
 
 //Laman admin
 Route::get('/admin-side', [AdminController::class, 'index']);
-Route::get('/beritadashboard', [BeritaController::class, 'index']);
+Route::get('/berita-admin', [BeritaController::class, 'index']);
 
 
 // Login
