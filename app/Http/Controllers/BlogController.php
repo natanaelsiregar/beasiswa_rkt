@@ -9,6 +9,9 @@ use App\Models\BeasiswaEksternal;
 
 class BlogController extends Controller
 {
+    public function index(){
+        
+    }
     public function create($type){
         return view('admin.createBlog',compact('type'));
     }

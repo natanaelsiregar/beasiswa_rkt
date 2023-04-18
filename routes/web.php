@@ -9,6 +9,8 @@ use App\Http\Controllers\EksternalBeasiswaController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DaftarBeasiswaController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BeritaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +25,9 @@ use App\Http\Controllers\AdminController;
 
 //Laman admin
 Route::get('/admin-side', [AdminController::class, 'index']);
+Route::get('/beritadashboard', [BeritaController::class, 'index']);
+
+
 // Login
 Route::middleware('guest')->group(function(){
 
