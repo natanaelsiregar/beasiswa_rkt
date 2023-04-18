@@ -57,7 +57,7 @@
   <div class="mb-10">
     <label for="thumbnail" class="text-xl p-1 tracking-wide">Photo</label>
     <input class="block w-full px-4 py-3 text-gray-700 border border-gray-300 rounded leading-tight focus:outline-none hover:shadow-md" type="file" id="thumbnail" name="thumbnail">
-    @error('caption')
+    @error('thumbnail')
     <div class="text-red-600  pl-2">{{ $message }}</div>
     @enderror
   </div>

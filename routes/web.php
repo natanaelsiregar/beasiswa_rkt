@@ -23,9 +23,7 @@ use App\Http\Controllers\BeritaController;
 */
 
 
-//Laman admin
-Route::get('/admin-side', [AdminController::class, 'index']);
-Route::get('/berita-admin', [BeritaController::class, 'index']);
+
 
 
 // Login
@@ -48,6 +46,14 @@ Route::group(
     ['middleware'=>['auth','role']],
     function(){
 
+        //Laman admin
+        Route::get('/admin-side', [AdminController::class, 'index']);
+        Route::get('/berita-admin', [BeritaController::class, 'index']);
+        Route::get('/tambah-berita-admin', [BeritaController::class, 'create']);
+        Route::get('/ubah-berita/{id}', [BeritaController::class, 'edit']);
+        Route::post('/edit-berita/{id}', [BeritaController::class, 'update'])->name('berita.ubah');
+        Route::get('/berita/hapus/{id}', [BeritaController::class, 'destroy'])->name('berita.hapus');
+        
         Route::get('/create-data-beasiswa/{tahun}',[
             DataBeasiswaController::class,'create'])->name('create-data-beasiswa');
         Route::post('/create-data-beasiswa/{tahun}',
