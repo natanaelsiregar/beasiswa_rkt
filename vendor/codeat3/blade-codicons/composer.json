@@ -1,0 +1,55 @@
+{
+    "name": "codeat3/blade-codicons",
+    "description": "A package to easily make use of \"VSCode Codicons\" in your Laravel Blade views.",
+    "keywords": ["blade", "codicons", "laravel"],
+    "homepage": "https://github.com/codeat3/blade-codicons",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Swapnil Sarwe",
+            "homepage": "https://swapnilsarwe.com"
+        },
+        {
+            "name": "Dries Vints",
+            "homepage": "https://driesvints.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "blade-ui-kit/blade-icons": "^1.1.1",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "codeat3/blade-icon-generation-helpers": "^0.1",
+        "codeat3/phpcs-styles": "^1.0",
+        "orchestra/testbench": "^6.0|^7.0",
+        "phpunit/phpunit": "^9.0",
+        "ext-dom": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codeat3\\BladeCodicons\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Codeat3\\BladeCodicons\\BladeCodiconsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/php-cs-fixer fix"
+    }
+}
